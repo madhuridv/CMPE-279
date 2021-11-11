@@ -7,10 +7,12 @@
 2)  **Name** : Payal Ghule<br/>
    **SJSU ID**: 015337036
    
- **Steps to execute the files**<br/>
- **Server** <br/>
+ **Steps to execute the files :**<br/>
+ 
+ **Server:** <br/>
  cc -o server server.c <br/>
 ./server  <br/>
-**Client** <br/>
+
+**Client:** <br/>
  cc -o client client.c <br/>
 ./client 
