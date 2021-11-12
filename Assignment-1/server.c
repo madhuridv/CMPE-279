@@ -60,7 +60,6 @@ int main(int argc, char const *argv[])
     }
 
     processId = fork();
-    printf("process ID %d\n", processId);
 
     if(processId < 0)
     {
@@ -68,7 +67,7 @@ int main(int argc, char const *argv[])
 	    exit(EXIT_FAILURE);
     }
     else if(processId == 0) {
-    printf("Child process\n");
+    printf("Child Process \n");
     pwd = getpwnam("nobody");
     printf("pid of nobody is %d\n", pwd->pw_uid);
     //Dropping privileges
