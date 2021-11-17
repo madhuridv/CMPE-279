@@ -1,6 +1,6 @@
 # CMPE-279
 
-## Assignment -1
+## Assignment - 1 & Assignment - 2
 1) **Name** : Madhuri Dhani Venu<br/>
   
 2)  **Name** : Payal Ghule<br/>
