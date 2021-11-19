@@ -79,13 +79,19 @@ int main(int argc, char const *argv[])
     printf("Child Process \n");
     pwd = getpwnam("nobody");
     printf("pid of nobody is %d\n", pwd->pw_uid);
+    int duplicate_soc = dup(new_socket);
+    if(duplicate_soc == -1) {
+            perror("Socket duplication failed\n");
+	    exit(EXIT_FAILURE);
+    }
     //Dropping privileges
     setuid(pwd -> pw_uid);
     printf("Privilege has been dropped successfully\n");
     
     // re-exec the child process after fork
     char intToStr[10];
-    snprintf(intToStr,10,"%d",new_socket);
+    //snprintf(intToStr,10,"%d",duplicate_soc);
+     snprintf(intToStr,10,"%d",new_socket);
     char *args[] = {"child",intToStr,NULL};
     int status = execvp(argv[0], args);
     if(status < 0) {
